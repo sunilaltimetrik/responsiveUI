@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="intra-body">
+        <!--Header Section Start-->
+        <div class="intra-header">
+            <div class="row">
+                <div class="col-sm-1 col-xs-2" style="background-color:#F26522;width:80px; height:70px;">
+                    <div class="nav-toggle">
+                        <div class="nav-toggle-bar"></div>
+                    </div>
+
+                    <nav class="nav custom">
+                        <div class="dropdown-btn">
+                            <a href="#" class=" text-left text-deco-none">
+                                <span class="main-menu">
+                                     <img src="./assets/main_menu1.png" alt="menu2" class="padd-r5">
+                                     MY SPACE
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="dropdown-container">
+                            <div class="vertical-menu text-left" id="intranet_menu">
+                                <a href="#" class="option active"><div class="menu1"></div> Timesheet</a>
+                                <a href="#" class="option"><div class="menu2"></div>Leave</a>
+                                <a href="#" class="option"><div class="menu3"></div>Swipe</a>
+                                <a href="#" class="option"><div class="menu4"></div>Payslip</a>
+                                <a href="#" class="option"><div class="menu5"></div>Performance</a>
+                             </div>
+                        </div>
+                       <!--Use drop "dropdown-btn" class if sub menu avil remove dropdown-btn1 class-->
+                        <div class="dropdown-btn1">
+                            <a href="#" class="text-left text-deco-none">
+                                <span class="main-menu">
+                                     <img src="./assets/main_menu2.png" alt="menu2" class="padd-r5">
+                                      HUMAN RESOURCE
+                                </span>      
+                            </a>
+                            <div class="dropdown-container"></div>
+                        </div>
+
+                        <div class="dropdown-btn1">       
+                            <a href="#" class="text-left text-deco-none">
+                                <span class="main-menu">
+                                     <img src="./assets/main_menu3.png" alt="menu3" class="padd-r5">
+                                     FINANCE
+                                </span>
+                            </a>
+                            <div class="dropdown-container"></div>
+                        </div>
+
+                        <div class="dropdown-btn1">   
+                            <a href="#" class="text-left text-deco-none">
+                               <span class="main-menu">
+                                     <img src="./assets/main_menu4.png" alt="menu4" class="padd-r5">
+                                     FACILITY & ADMIN
+                               </span>
+                            </a>
+                            <div class="dropdown-container"></div>
+                        </div>
+
+                        <div class="dropdown-btn1">       
+                            <a href="#" class="text-left text-deco-none">
+                               <span class="main-menu">
+                                     <img src="./assets/main_menu5.png" alt="menu5" class="padd-r5">
+                                     INFRASTRUCTURE
+                               </span>         
+                            </a>
+                            <div class="dropdown-container"></div>
+                        </div>
+
+                        <div class="dropdown-btn1">   
+                            <a href="#" class="text-deco-none">
+                                <span class="main-menu">
+                                     <img src="./assets/main_menu6.png" alt="menu6" class="padd-r5">
+                                     TICKETS
+                                </span>         
+                            </a>
+                            <div class="dropdown-container"></div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-6 col-xs-5 no-padd-left">
+                    <img src="./assets/intranet_logo.png" alt="Intranet Logo" class="logo-padd">
+                </div>
+                <!--<div class="col-sm-4 col-xs-4">
+                    <div class="padd-20">-->
+                        <!--<div class="inner-addon right-addon">
+                            <i class="glyphicon glyphicon-search"></i>
+                            <input type="text" class="form-control search-bg" placeholder="Search" />
+                        </div>-->
+
+        
+
+                    <!--</div>
+                </div>-->
+                <div class="col-sm-5 col-xs-5 pull-right no-padd-left" style="background-color: #F5F4F4;width:auto; height:70px;">
+                     <!--Search popup start-->
+                        <div id="myOverlay" class="overlay col-xs-12" style="margin-top: 70px;">
+                            
+                            <span class="closebtn" onclick="closeSearch()">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </span>
+                            <div class="overlay-content">
+                                <form action="">
+                                    <input type="text" placeholder="Search.." name="search">
+                                    <button type="submit"><span class="glyphicon glyphicon-arrow-right"></span></button>
+                                </form>
+                            </div>
+                        </div> 
+                        <!--Search popup end-->
+                        <button class="openBtn" onclick="openSearch()">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        <!--Profile Dropdown Start-->
+                        <div class="dropdown inline">
+                            <button class="openBtn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 <span class="glyphicon">&#xe008;</span>
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">My Profile</a></li>
+                                <li><a href="#">Other Setting</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </div>
+                        <!--Profile Dropdown End-->
+
+                </div>
+            </div>
+
+
+        </div>
+        <!--Header Section End-->
+
+        <!--Main Body Section Start-->
+        <div class="intra-main m-top80">
+            <div class="row bg-white m-lp1 m-rp1 get-ready-test-style">
+                <div class="col-xs-3 col-md-1 no-padd-left width68">
+                    <img src="./assets/get_ready_icon.png" alt="Intranet Logo" class="">
+                </div>
+                <div class="col-xs-9 col-md-11 detail-text f-16 padd1-5p">
+                    Get ready for an action-packed weekend with DCult! Tech Workshop – AI with UX Development on Dec. 8 @Altimetrik Playground,
+                    Bangalore EC – IFA Hackathon -
+                </div>
+            </div>
+            <div class="row m-lp1 m-rp1 p-top15">
+                
+                <div class="col-md-3 col-md-push-9  col-sm-12 col-xs-12 no-padd-left no-padd-right bg-white">
+                    <div class="grid-news">
+                        <div class="col-xs-3 no-padd-left">
+                             <img src="./assets/news_icon.png" alt="News image" class="">
+                        </div>
+                        <div class="col-xs-9 no-padd-left news2 news-box-title">
+                            NEWS
+                        </div>
+                        <div class="news3 news3-style col-xs-12">
+                            <div class="news-date">Dec 15, 2018</div>
+                            Appeal from Vattikuti India Foundation Come forward and pledge your support by donating whatever amount…
+                        </div>
+                        <div class="news3 news3-style col-xs-12">
+                            <div class="news-date">Dec 15, 2018</div>
+                            Appeal from Vattikuti India Foundation Come forward and pledge your support by donating whatever amount…
+                        </div>
+                        <div class="news3 news3-style col-xs-12">
+                            <div class="news-date">Dec 15, 2018</div>
+                            Appeal from Vattikuti India Foundation Come forward and pledge your support by donating whatever amount…
+                        </div>
+                        <div class="news3 news3-style col-xs-12">
+                            <div class="news-date">Dec 15, 2018</div>
+                            Appeal from Vattikuti India Foundation Come forward and pledge your support by donating whatever amount…
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-md-pull-3 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-8 col-xs-12 col-sm-6 no-padd-left">
+                            <img src="./assets/main_img.png" alt="Intranet Logo" class="width100 height271">
+                        </div>
+                        <div class="col-md-4 col-xs-12 col-sm-6 no-padd-left">
+                            <img src="./assets/play_ground.png" alt="play_ground" class="width100 height271">
+                        </div>
+                    </div>
+                    <div class="row p-top15">
+                        <div class="col-md-3 col-xs-6 col-sm-6 no-padd-left">
+                            <div class="bg-white sm-box padd-25">
+                                <div class="timesheet">
+                                     <img src="./assets/timesheet.png" alt="" class="">
+                                </div>
+                                <div class="timesheet-text-style">TIME SHEET</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 col-sm-6 no-padd-left">
+                            <div class="bg-white sm-box padd-25">
+                                <div class="my_leave">
+                                     <img src="./assets/my_leave.png" alt="" class="">
+                                </div>
+                                <div class="timesheet-text-style">MY LEAVE</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 col-sm-6 no-padd-left">
+                            <div class="bg-white sm-box padd-25">
+                                <div class="help_desk">
+                                     <img src="./assets/help_desk.png" alt="" class="">   
+                                </div>
+                                <div class="timesheet-text-style">HELP DESK</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6 col-sm-6 no-padd-left">
+                            <div class="bg-white sm-box padd-25">
+                                <div class="travel">
+                                     <img src="./assets/travel.png" alt="" class="">   
+                                </div>
+                                <div class="timesheet-text-style">TRAVEL</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row m-lp1 m-rp1 p-top15">
+                <div class="col-md-9 col-xs-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12 col-sm-12 no-padd-left">
+                            <div class="grid-blo bg-white">
+                                <div class="row">
+                                    <div class="col-md-2 col-xs-2 col-sm-1">
+                                        <img src="./assets/blog_icon.png" alt="Blog image" class="">
+                                    </div>
+                                    <div class="col-md-10 col-xs-10 col-sm-11 blog-box-title">
+                                        BLOG
+                                    </div>
+                                </div>
+                                <div class="row blog-style">
+                                    <div class="col-md-4 col-sm-3 col-xs-6 blog3-pre blog3-img1">
+                                         <img src="./assets/blog_img1.png" alt="Blog image" class="width115">
+                                    </div>
+                                    <div class="col-md-8 col-sm-9 col-sm-9 col-xs blog3">
+                                        <div class="blog-inn-title">Making it Real with Machine Learning</div>
+                                        One of the patterns that I see with several clients is arduous handling of voice and image data in a contact center environment.
+                                    </div>
+                                </div>
+                                <div class="row blog-style">
+                                    <div class="col-md-4 col-sm-3 col-xs-6 blog3-pre blog3-img2">
+                                         <img src="./assets/blog_img2.png" alt="Blog image" class="width115">                                        
+                                    </div>
+                                    <div class="col-md-8 col-sm-9 col-xs blog3">
+                                        <div class="blog-inn-title">Building Lasting Transformation</div>
+                                        A revelation by Raj Vattikuti Over the last couple of years, to drive greater business agility I am seeing the Business,
+                                        IT and HR teams have started to come…
+                                    </div>  
+                                </div>
+                                <div class="row blog-style">
+                                    <div class="col-md-4 col-sm-3 col-xs-6 blog3-pre blog3-img3">
+                                         <img src="./assets/blog_img3.png" alt="Blog image" class="width115">                                        
+                                    </div>
+                                    <div class="col-md-8 col-sm-9 col-xs blog3">
+                                        <div class="blog-inn-title">How Digital Disruption Is Changing the Face Of Banking</div>
+                                        Disruptive technologies are continue to challenge the traditional banking model…
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 col-sm-12 no-padd-left">
+                            <div class="grid-gallery">
+                                <div class="row">
+                                    <div class="col-md-2 col-xs-2 col-sm-1">
+                                        <img src="./assets/gallery_icon.png" alt="GALLERY image" class="">
+                                    </div>
+                                    <div class="col-md-10 col-xs-10 col-sm-11 gallery-box-title">
+                                        GALLERY
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-gallery-img">
+                                <div class="row">
+                                    <div class="col-xs-6 gallery-box1 gallery-img1 ">
+                                        <img src="./assets/gallery_img1.png" alt="GALLERY image" class="g-img-style">                                    
+                                    </div>
+                                    <div class="col-xs-6 gallery-box2 gallery-img2">
+                                        <img src="./assets/gallery_img2.png" alt="GALLERY image" class="g-img-style">                                                                        
+                                    </div>
+                                </div>
+                                <div class="row p-top30">
+                                    <div class="col-xs-6 gallery-box3 gallery-img3">
+                                        <img src="./assets/gallery_img3.png" alt="GALLERY image" class="g-img-style">                                                                        
+                                    </div>
+                                    <div class="col-xs-6 gallery-box4 gallery-img4">
+                                        <img src="./assets/gallery_img4.png" alt="GALLERY image" class="g-img-style">                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-12 col-sm-12">
+                    <div class="row bg-white">
+                        <div class="col-xs-12 no-padd-left no-padd-right">
+                            <div class="row padd-15">
+                                <div class="col-xs-5">
+                                    <img src="./assets/scrumble.png" alt="scrumble Image" class="">
+                                </div>
+                                <div class="col-xs-7">
+                                    <div class="scrumble-title">3rd Issue</div>
+                                    <div class="scrumble-date">Oct - Nov 2018</div>
+                                    <div class="yellow-link pull-right">
+                                         <span class="glyphicon glyphicon-arrow-right text-black"></span>
+                                        READ HERE
+                                    </div><br/>
+                                    <div class="normal-text">
+                                        Check out previous editions
+                                    </div>
+                                    <div class="yellow-link pull-right">
+                                         <span class="glyphicon glyphicon-arrow-right text-black"></span>
+                                             HERE
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row p-top15">
+                        <div class="col-xs-12 no-padd-left no-padd-right">
+                            <div class="grid-dairy bg-white padd-15">
+                                <div class="scrumble-title dairy1">DCult Dairy</div>
+                                <div class="dairy2">
+                                    <img src="./assets/dcult_img.png" alt="scrumble Image" class="width100p">
+                                </div>
+                                <div class="dcult-text1 dairy3 p-top5">DCult, Your Community..</div>
+                                <div class="normal-text dairy4 p-top15">Now also as, DCult, the website</div>
+                                <div class="dairy5 p-top10">
+                                    <button type="button" class="pull-right btn btn-default custom-btn">START BROWING NOW</button>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Main Body Section End-->
+
+        <!--Footer Section Start-->
+        <div class="intra-footer p-top15">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center detail-text f-12">
+                        © Altimetrik. All rights reserved 2018
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer Section End-->
+    </div>
+
+
+
+    <script>
+        // hamburger Method
+        (function () {
+
+            var hamburger = {
+                navToggle: document.querySelector('.nav-toggle'),
+                nav: document.querySelector('nav'),
+
+                doToggle: function (e) {
+                    e.preventDefault();
+                    this.navToggle.classList.toggle('expanded');
+                    this.nav.classList.toggle('expanded');
+                }
+            };
+
+            hamburger.navToggle.addEventListener('click', function (e) { hamburger.doToggle(e); });
+            // hamburger.nav.addEventListener('click', function (e) { hamburger.doToggle(e); });
+
+        }());
+
+        // Search popup start
+        function openSearch() {
+        document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function closeSearch() {
+        document.getElementById("myOverlay").style.display = "none";
+        }
+        // Search popup end
+
+        // Add active class to the current Menu option (highlight it) Start
+            var header = document.getElementById("intranet_menu");
+            var btns = header.getElementsByClassName("option");
+            for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+            }
+         // Add active class to the current Menu option (highlight it) End
+         // side navigation main dropdown and sub menu Start
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("in_active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "none") {
+            dropdownContent.style.display = "block";
+            } else {
+            dropdownContent.style.display = "none";
+            }
+            });
+            }
+         // side navigation main dropdown and sub menu End
+    </script>
+
+</body>
+
+</html>
